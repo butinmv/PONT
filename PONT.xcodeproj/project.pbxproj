@@ -9,19 +9,34 @@
 /* Begin PBXBuildFile section */
 		A20CCF7028CCB59400717B0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF6F28CCB59400717B0F /* AppDelegate.swift */; };
 		A20CCF7228CCB59400717B0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF7128CCB59400717B0F /* SceneDelegate.swift */; };
-		A20CCF7428CCB59400717B0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF7328CCB59400717B0F /* ViewController.swift */; };
+		A20CCF7428CCB59400717B0F /* ShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF7328CCB59400717B0F /* ShelfViewController.swift */; };
 		A20CCF7928CCB59500717B0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20CCF7828CCB59500717B0F /* Assets.xcassets */; };
 		A20CCF7C28CCB59500717B0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20CCF7A28CCB59500717B0F /* LaunchScreen.storyboard */; };
+		A20CCF8528CCBADB00717B0F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A20CCF8428CCBADB00717B0F /* SnapKit */; };
+		A20CCF8728CCBB6300717B0F /* Alcohol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF8628CCBB6300717B0F /* Alcohol.swift */; };
+		A20CCF8928CCBD6900717B0F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF8828CCBD6900717B0F /* Person.swift */; };
+		A20CCF8B28CCBE3200717B0F /* Shelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF8A28CCBE3200717B0F /* Shelf.swift */; };
+		A20CCF9028CCC16500717B0F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF8F28CCC16500717B0F /* Section.swift */; };
+		A20CCF9228CCFC8200717B0F /* AlcoholCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9128CCFC8200717B0F /* AlcoholCollectionViewCell.swift */; };
+		A20CCF9428CD06C700717B0F /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9328CD06C700717B0F /* Typealias.swift */; };
+		A20CCF9628CD2C9600717B0F /* HeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9528CD2C9600717B0F /* HeaderSupplementaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A20CCF6C28CCB59400717B0F /* PONT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PONT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20CCF6F28CCB59400717B0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A20CCF7128CCB59400717B0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A20CCF7328CCB59400717B0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A20CCF7328CCB59400717B0F /* ShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfViewController.swift; sourceTree = "<group>"; };
 		A20CCF7828CCB59500717B0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A20CCF7B28CCB59500717B0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A20CCF7D28CCB59500717B0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20CCF8628CCBB6300717B0F /* Alcohol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcohol.swift; sourceTree = "<group>"; };
+		A20CCF8828CCBD6900717B0F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A20CCF8A28CCBE3200717B0F /* Shelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shelf.swift; sourceTree = "<group>"; };
+		A20CCF8F28CCC16500717B0F /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		A20CCF9128CCFC8200717B0F /* AlcoholCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholCollectionViewCell.swift; sourceTree = "<group>"; };
+		A20CCF9328CD06C700717B0F /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		A20CCF9528CD2C9600717B0F /* HeaderSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSupplementaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20CCF8528CCBADB00717B0F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +70,29 @@
 		A20CCF6E28CCB59400717B0F /* PONT */ = {
 			isa = PBXGroup;
 			children = (
+				A20CCF8C28CCBF1200717B0F /* Models */,
 				A20CCF6F28CCB59400717B0F /* AppDelegate.swift */,
 				A20CCF7128CCB59400717B0F /* SceneDelegate.swift */,
-				A20CCF7328CCB59400717B0F /* ViewController.swift */,
+				A20CCF7328CCB59400717B0F /* ShelfViewController.swift */,
+				A20CCF9328CD06C700717B0F /* Typealias.swift */,
 				A20CCF7828CCB59500717B0F /* Assets.xcassets */,
 				A20CCF7A28CCB59500717B0F /* LaunchScreen.storyboard */,
 				A20CCF7D28CCB59500717B0F /* Info.plist */,
+				A20CCF8F28CCC16500717B0F /* Section.swift */,
+				A20CCF9128CCFC8200717B0F /* AlcoholCollectionViewCell.swift */,
+				A20CCF9528CD2C9600717B0F /* HeaderSupplementaryView.swift */,
 			);
 			path = PONT;
+			sourceTree = "<group>";
+		};
+		A20CCF8C28CCBF1200717B0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A20CCF8A28CCBE3200717B0F /* Shelf.swift */,
+				A20CCF8828CCBD6900717B0F /* Person.swift */,
+				A20CCF8628CCBB6300717B0F /* Alcohol.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +111,9 @@
 			dependencies = (
 			);
 			name = PONT;
+			packageProductDependencies = (
+				A20CCF8428CCBADB00717B0F /* SnapKit */,
+			);
 			productName = PONT;
 			productReference = A20CCF6C28CCB59400717B0F /* PONT.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +142,9 @@
 				Base,
 			);
 			mainGroup = A20CCF6328CCB59400717B0F;
+			packageReferences = (
+				A20CCF8328CCBADB00717B0F /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A20CCF6D28CCB59400717B0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,9 +171,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20CCF7428CCB59400717B0F /* ViewController.swift in Sources */,
+				A20CCF8B28CCBE3200717B0F /* Shelf.swift in Sources */,
+				A20CCF9428CD06C700717B0F /* Typealias.swift in Sources */,
+				A20CCF9228CCFC8200717B0F /* AlcoholCollectionViewCell.swift in Sources */,
+				A20CCF8928CCBD6900717B0F /* Person.swift in Sources */,
+				A20CCF7428CCB59400717B0F /* ShelfViewController.swift in Sources */,
+				A20CCF9028CCC16500717B0F /* Section.swift in Sources */,
 				A20CCF7028CCB59400717B0F /* AppDelegate.swift in Sources */,
+				A20CCF8728CCBB6300717B0F /* Alcohol.swift in Sources */,
 				A20CCF7228CCB59400717B0F /* SceneDelegate.swift in Sources */,
+				A20CCF9628CD2C9600717B0F /* HeaderSupplementaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T663N6CXV2;
@@ -289,6 +334,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.butinmv.PONT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,6 +346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T663N6CXV2;
@@ -316,6 +363,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.butinmv.PONT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A20CCF8328CCBADB00717B0F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A20CCF8428CCBADB00717B0F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A20CCF8328CCBADB00717B0F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A20CCF6428CCB59400717B0F /* Project object */;
 }
