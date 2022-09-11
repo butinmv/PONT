@@ -108,8 +108,7 @@ extension ShelfViewController {
             (supplementaryView, string, indexPath) in
 
             if let snapshot = self.currentSnapshot {
-                let shelf = snapshot.sectionIdentifiers[indexPath.section]
-                supplementaryView.person = shelf.person
+                
             }
         }
         
