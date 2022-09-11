@@ -9,6 +9,10 @@ import UIKit
 
 public extension NSDirectionalEdgeInsets {
     
+    init(value: CGFloat) {
+        self.init(top: value, leading: value, bottom: value, trailing: value)
+    }
+    
     init(horizontal: CGFloat) {
         self.init(top: 0, leading: horizontal, bottom: 0, trailing: horizontal)
     }

@@ -64,7 +64,7 @@ class ShelfViewController: UIViewController {
             elementKind: UICollectionView.elementKindSectionFooter
         ) { [unowned self] (supplementaryView, string, indexPath) in
 
-            if let snapshot = self.currentSnapshot {
+            if let _ = self.currentSnapshot {
                 
             }
         }
