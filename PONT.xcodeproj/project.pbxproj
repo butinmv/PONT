@@ -20,6 +20,8 @@
 		A20CCF9228CCFC8200717B0F /* AlcoholCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9128CCFC8200717B0F /* AlcoholCollectionViewCell.swift */; };
 		A20CCF9428CD06C700717B0F /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9328CD06C700717B0F /* Typealias.swift */; };
 		A20CCF9628CD2C9600717B0F /* HeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9528CD2C9600717B0F /* HeaderSupplementaryView.swift */; };
+		A20CCF9828CE19E700717B0F /* BottomSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9728CE19E700717B0F /* BottomSupplementaryView.swift */; };
+		A20CCF9A28CE1A0A00717B0F /* ShelfBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9928CE1A0A00717B0F /* ShelfBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		A20CCF9128CCFC8200717B0F /* AlcoholCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholCollectionViewCell.swift; sourceTree = "<group>"; };
 		A20CCF9328CD06C700717B0F /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		A20CCF9528CD2C9600717B0F /* HeaderSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSupplementaryView.swift; sourceTree = "<group>"; };
+		A20CCF9728CE19E700717B0F /* BottomSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSupplementaryView.swift; sourceTree = "<group>"; };
+		A20CCF9928CE1A0A00717B0F /* ShelfBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,17 +74,14 @@
 		A20CCF6E28CCB59400717B0F /* PONT */ = {
 			isa = PBXGroup;
 			children = (
-				A20CCF8C28CCBF1200717B0F /* Models */,
+				A20CCF9E28CE1A7100717B0F /* Utils */,
+				A20CCF9C28CE1A1D00717B0F /* Core */,
+				A20CCF9B28CE1A1700717B0F /* Views */,
 				A20CCF6F28CCB59400717B0F /* AppDelegate.swift */,
 				A20CCF7128CCB59400717B0F /* SceneDelegate.swift */,
-				A20CCF7328CCB59400717B0F /* ShelfViewController.swift */,
-				A20CCF9328CD06C700717B0F /* Typealias.swift */,
 				A20CCF7828CCB59500717B0F /* Assets.xcassets */,
 				A20CCF7A28CCB59500717B0F /* LaunchScreen.storyboard */,
 				A20CCF7D28CCB59500717B0F /* Info.plist */,
-				A20CCF8F28CCC16500717B0F /* Section.swift */,
-				A20CCF9128CCFC8200717B0F /* AlcoholCollectionViewCell.swift */,
-				A20CCF9528CD2C9600717B0F /* HeaderSupplementaryView.swift */,
 			);
 			path = PONT;
 			sourceTree = "<group>";
@@ -88,11 +89,48 @@
 		A20CCF8C28CCBF1200717B0F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A20CCF8F28CCC16500717B0F /* Section.swift */,
 				A20CCF8A28CCBE3200717B0F /* Shelf.swift */,
 				A20CCF8828CCBD6900717B0F /* Person.swift */,
 				A20CCF8628CCBB6300717B0F /* Alcohol.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A20CCF9B28CE1A1700717B0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A20CCF9128CCFC8200717B0F /* AlcoholCollectionViewCell.swift */,
+				A20CCF9528CD2C9600717B0F /* HeaderSupplementaryView.swift */,
+				A20CCF9728CE19E700717B0F /* BottomSupplementaryView.swift */,
+				A20CCF9928CE1A0A00717B0F /* ShelfBackgroundView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A20CCF9C28CE1A1D00717B0F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A20CCF8C28CCBF1200717B0F /* Models */,
+				A20CCF9D28CE1A2A00717B0F /* Shelf */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A20CCF9D28CE1A2A00717B0F /* Shelf */ = {
+			isa = PBXGroup;
+			children = (
+				A20CCF7328CCB59400717B0F /* ShelfViewController.swift */,
+			);
+			path = Shelf;
+			sourceTree = "<group>";
+		};
+		A20CCF9E28CE1A7100717B0F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A20CCF9328CD06C700717B0F /* Typealias.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A20CCF8B28CCBE3200717B0F /* Shelf.swift in Sources */,
+				A20CCF9A28CE1A0A00717B0F /* ShelfBackgroundView.swift in Sources */,
 				A20CCF9428CD06C700717B0F /* Typealias.swift in Sources */,
+				A20CCF9828CE19E700717B0F /* BottomSupplementaryView.swift in Sources */,
 				A20CCF9228CCFC8200717B0F /* AlcoholCollectionViewCell.swift in Sources */,
 				A20CCF8928CCBD6900717B0F /* Person.swift in Sources */,
 				A20CCF7428CCB59400717B0F /* ShelfViewController.swift in Sources */,
