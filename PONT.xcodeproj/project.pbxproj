@@ -117,7 +117,6 @@
 		A20CCF9C28CE1A1D00717B0F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A20CCF8C28CCBF1200717B0F /* Models */,
 				A20CCF9D28CE1A2A00717B0F /* Shelf */,
 			);
 			path = Core;
@@ -126,6 +125,7 @@
 		A20CCF9D28CE1A2A00717B0F /* Shelf */ = {
 			isa = PBXGroup;
 			children = (
+				A20CCF8C28CCBF1200717B0F /* Models */,
 				A20CCF7328CCB59400717B0F /* ShelfViewController.swift */,
 				A20CCFA328CE205F00717B0F /* ShelfLayout.swift */,
 			);
