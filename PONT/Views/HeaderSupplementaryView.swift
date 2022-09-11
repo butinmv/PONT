@@ -85,8 +85,8 @@ class HeaderSupplementaryView: UICollectionReusableView {
             $0.top.equalToSuperview().offset(Layout.verticalOffset)
             $0.leading.equalToSuperview()
             $0.bottom.equalToSuperview().offset(-Layout.verticalOffset)
-            $0.trailing.equalTo(nameAndSirnameStackView.snp.leading).inset(Layout.spcaingBetweenComponent)
-            $0.trailing.equalTo(timeLabel.snp.leading).inset(Layout.spcaingBetweenComponent)
+            $0.trailing.equalTo(nameAndSirnameStackView.snp.leading).offset(-Layout.spcaingBetweenComponent)
+            $0.trailing.equalTo(timeLabel.snp.leading).offset(-Layout.spcaingBetweenComponent)
         }
         
         nameAndSirnameStackView.snp.makeConstraints {
