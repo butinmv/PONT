@@ -25,13 +25,14 @@ class ShelfViewController: UIViewController {
     }
     
     // MARK: - Methods
+    
     private func configureHierarchy() {
         view.backgroundColor = .systemBackground
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
             $0.top.bottom.equalToSuperview()
-            $0.leading.trailing.equalToSuperview().inset(CGFloat(16))
+            $0.leading.trailing.equalToSuperview().inset(Layout.inset)
         }
         collectionView.backgroundColor = .clear
     }
@@ -59,8 +60,9 @@ class ShelfViewController: UIViewController {
             }
         }
 
-        let bottomSupplementaryRegistration = UICollectionView.SupplementaryRegistration<BottomSupplementaryView>(elementKind: UICollectionView.elementKindSectionFooter) {
-            (supplementaryView, string, indexPath) in
+        let bottomSupplementaryRegistration = UICollectionView.SupplementaryRegistration<BottomSupplementaryView>(
+            elementKind: UICollectionView.elementKindSectionFooter
+        ) { [unowned self] (supplementaryView, string, indexPath) in
 
             if let snapshot = self.currentSnapshot {
                 
@@ -84,61 +86,5 @@ class ShelfViewController: UIViewController {
             currentSnapshot.appendItems(shelf.alcohols)
         }
         dataSource.apply(currentSnapshot, animatingDifferences: false)
-    }
-}
-
-// MARK: - Create Layout
-extension ShelfViewController {
-    
-    private enum Layout {
-        
-        static var spacing: CGFloat = 16
-        
-        enum Group {
-            static var width: CGFloat = 0.25
-            static var height: CGFloat = 200
-        }
-    }
-    
-    private func createLayout() -> UICollectionViewLayout {
-        let sectionProvider = {
-            (sectionIndex: Int, layoutEnvironment: LayoutEnvironment)
-            -> LayoutSection? in
-            
-            let itemSize = LayoutSize(widthDimension: .fractionalWidth(1),
-                                      heightDimension: .fractionalHeight(1))
-            let item = LayoutItem(layoutSize: itemSize)
-            let groupSize = LayoutSize(widthDimension: .fractionalWidth(Layout.Group.width),
-                                       heightDimension: .absolute(Layout.Group.height))
-            let group = LayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-            let section = LayoutSection(group: group)
-            section.orthogonalScrollingBehavior = .continuous
-            section.interGroupSpacing = Layout.spacing
-            section.contentInsets = EdgeInsets(bottom: 16, horizontal: 16)
-            section.decorationItems = [
-                LayoutDecorationItem.background(elementKind: ShelfBackgroundView.description()),
-            ]
-            
-            let headerSize = LayoutSize(widthDimension: .fractionalWidth(1),
-                                        heightDimension: .estimated(64))
-            let headerSupplementary = SupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-            let bottomSize = LayoutSize(widthDimension: .fractionalWidth(1),
-                                        heightDimension: .estimated(64))
-            let bottomSupplementary = SupplementaryItem(layoutSize: bottomSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
-           
-            section.boundarySupplementaryItems = [headerSupplementary, bottomSupplementary]
-            
-            return section
-        }
-        
-        let config = LayoutConfiguration()
-        config.interSectionSpacing = 16
-        
-        let layout = CompositionalLayout(sectionProvider: sectionProvider,
-                                         configuration: config)
-        
-        layout.register(ShelfBackgroundView.self, forDecorationViewOfKind: ShelfBackgroundView.description())
-        
-        return layout
     }
 }

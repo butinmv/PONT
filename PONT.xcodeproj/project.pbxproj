@@ -24,6 +24,7 @@
 		A20CCF9A28CE1A0A00717B0F /* ShelfBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9928CE1A0A00717B0F /* ShelfBackgroundView.swift */; };
 		A20CCFA028CE1D0D00717B0F /* + UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9F28CE1D0D00717B0F /* + UIEdgeInsets.swift */; };
 		A20CCFA228CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCFA128CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift */; };
+		A20CCFA428CE205F00717B0F /* ShelfLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCFA328CE205F00717B0F /* ShelfLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		A20CCF9928CE1A0A00717B0F /* ShelfBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfBackgroundView.swift; sourceTree = "<group>"; };
 		A20CCF9F28CE1D0D00717B0F /* + UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ UIEdgeInsets.swift"; sourceTree = "<group>"; };
 		A20CCFA128CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ NSDirectionalEdgeInsets.swift"; sourceTree = "<group>"; };
+		A20CCFA328CE205F00717B0F /* ShelfLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				A20CCF7328CCB59400717B0F /* ShelfViewController.swift */,
+				A20CCFA328CE205F00717B0F /* ShelfLayout.swift */,
 			);
 			path = Shelf;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A20CCF8B28CCBE3200717B0F /* Shelf.swift in Sources */,
+				A20CCFA428CE205F00717B0F /* ShelfLayout.swift in Sources */,
 				A20CCF9A28CE1A0A00717B0F /* ShelfBackgroundView.swift in Sources */,
 				A20CCF9428CD06C700717B0F /* Typealias.swift in Sources */,
 				A20CCF9828CE19E700717B0F /* BottomSupplementaryView.swift in Sources */,

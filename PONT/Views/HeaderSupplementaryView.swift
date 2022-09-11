@@ -10,6 +10,13 @@ import SnapKit
 
 class HeaderSupplementaryView: UICollectionReusableView {
     
+    private enum Layout {
+        static var cornerRadius: CGFloat = 16
+        static var avatarSize = CGSize(width: 85, height: 85)
+        static var verticalOffset: CGFloat = 16
+        static var spcaingBetweenComponent: CGFloat = 8
+    }
+    
     var person: Person! {
         didSet {
             avatarImageView.image = person.avatar
@@ -60,7 +67,7 @@ class HeaderSupplementaryView: UICollectionReusableView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        avatarImageView.layer.cornerRadius = 15
+        avatarImageView.layer.cornerRadius = Layout.cornerRadius
     }
     
     required init?(coder: NSCoder) {
@@ -74,12 +81,12 @@ class HeaderSupplementaryView: UICollectionReusableView {
         addSubview(timeLabel)
         
         avatarImageView.snp.makeConstraints {
-            $0.size.equalTo(CGSize(width: 85, height: 85))
-            $0.top.equalToSuperview().offset(CGFloat(16))
+            $0.size.equalTo(Layout.avatarSize)
+            $0.top.equalToSuperview().offset(Layout.verticalOffset)
             $0.leading.equalToSuperview()
-            $0.bottom.equalToSuperview().offset(CGFloat(-16))
-            $0.trailing.equalTo(nameAndSirnameStackView.snp.leading).offset(CGFloat(-8))
-            $0.trailing.equalTo(timeLabel.snp.leading).offset(CGFloat(-8))
+            $0.bottom.equalToSuperview().offset(-Layout.verticalOffset)
+            $0.trailing.equalTo(nameAndSirnameStackView.snp.leading).inset(Layout.spcaingBetweenComponent)
+            $0.trailing.equalTo(timeLabel.snp.leading).inset(Layout.spcaingBetweenComponent)
         }
         
         nameAndSirnameStackView.snp.makeConstraints {
