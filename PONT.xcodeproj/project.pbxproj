@@ -22,6 +22,8 @@
 		A20CCF9628CD2C9600717B0F /* HeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9528CD2C9600717B0F /* HeaderSupplementaryView.swift */; };
 		A20CCF9828CE19E700717B0F /* BottomSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9728CE19E700717B0F /* BottomSupplementaryView.swift */; };
 		A20CCF9A28CE1A0A00717B0F /* ShelfBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9928CE1A0A00717B0F /* ShelfBackgroundView.swift */; };
+		A20CCFA028CE1D0D00717B0F /* + UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9F28CE1D0D00717B0F /* + UIEdgeInsets.swift */; };
+		A20CCFA228CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCFA128CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		A20CCF9528CD2C9600717B0F /* HeaderSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSupplementaryView.swift; sourceTree = "<group>"; };
 		A20CCF9728CE19E700717B0F /* BottomSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSupplementaryView.swift; sourceTree = "<group>"; };
 		A20CCF9928CE1A0A00717B0F /* ShelfBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfBackgroundView.swift; sourceTree = "<group>"; };
+		A20CCF9F28CE1D0D00717B0F /* + UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ UIEdgeInsets.swift"; sourceTree = "<group>"; };
+		A20CCFA128CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ NSDirectionalEdgeInsets.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				A20CCF9328CD06C700717B0F /* Typealias.swift */,
+				A20CCF9F28CE1D0D00717B0F /* + UIEdgeInsets.swift */,
+				A20CCFA128CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -214,7 +220,9 @@
 				A20CCF9428CD06C700717B0F /* Typealias.swift in Sources */,
 				A20CCF9828CE19E700717B0F /* BottomSupplementaryView.swift in Sources */,
 				A20CCF9228CCFC8200717B0F /* AlcoholCollectionViewCell.swift in Sources */,
+				A20CCFA228CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift in Sources */,
 				A20CCF8928CCBD6900717B0F /* Person.swift in Sources */,
+				A20CCFA028CE1D0D00717B0F /* + UIEdgeInsets.swift in Sources */,
 				A20CCF7428CCB59400717B0F /* ShelfViewController.swift in Sources */,
 				A20CCF9028CCC16500717B0F /* Section.swift in Sources */,
 				A20CCF7028CCB59400717B0F /* AppDelegate.swift in Sources */,
