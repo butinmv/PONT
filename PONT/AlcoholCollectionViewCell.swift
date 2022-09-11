@@ -44,12 +44,13 @@ class AlcoholCollectionViewCell: UICollectionViewCell {
 extension AlcoholCollectionViewCell {
     
     private func configure() {
-        addSubview(imageView)
-        addSubview(titleLabel)
+        contentView.backgroundColor = .systemGray6
+        contentView.addSubview(imageView)
+        contentView.addSubview(titleLabel)
         
         imageView.snp.makeConstraints {
             $0.height.equalToSuperview().multipliedBy(0.8)
-            $0.top.equalToSuperview()
+            $0.top.equalToSuperview().inset(4)
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
         }
@@ -60,5 +61,11 @@ extension AlcoholCollectionViewCell {
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        contentView.layer.cornerRadius = 10
     }
 }

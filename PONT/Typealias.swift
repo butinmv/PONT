@@ -18,3 +18,4 @@ typealias LayoutConfiguration = UICollectionViewCompositionalLayoutConfiguration
 typealias CompositionalLayout = UICollectionViewCompositionalLayout
 typealias DataSource = UICollectionViewDiffableDataSource
 typealias Snapshot = NSDiffableDataSourceSnapshot
+typealias LayoutDecorationItem = NSCollectionLayoutDecorationItem

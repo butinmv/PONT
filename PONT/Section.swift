@@ -29,15 +29,16 @@ extension Section {
     
     static var allSections: [Shelf] = [
         Shelf(person: Person(name: "Максим",
-                             sirname: "Бутин"),
+                             sirname: "Бутин",
+                            avatar: UIImage(named: "avatar")),
               time: .now,
               alcohols: [
                 Alcohol(title: "Budweizer", image: UIImage(named: "budweizer")),
-                Alcohol(title: "Джин тоник", image: UIImage(named: "jin")),
-                Alcohol(title: "Jack Daniels", image: UIImage(named: "whisky")),
                 Alcohol(title: "Budweizer", image: UIImage(named: "budweizer")),
-                Alcohol(title: "Джин тоник", image: UIImage(named: "jin")),
-                Alcohol(title: "Jack Daniels", image: UIImage(named: "whisky")),
+                Alcohol(title: "Budweizer", image: UIImage(named: "budweizer")),
+                Alcohol(title: "Budweizer", image: UIImage(named: "budweizer")),
+                Alcohol(title: "Budweizer", image: UIImage(named: "budweizer")),
+                Alcohol(title: "Budweizer", image: UIImage(named: "budweizer")),
               ]
         ),
     ]

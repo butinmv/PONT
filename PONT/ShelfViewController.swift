@@ -40,12 +40,18 @@ extension ShelfViewController {
             let section = LayoutSection(group: group)
             section.orthogonalScrollingBehavior = .continuous
             section.interGroupSpacing = 16
-            section.contentInsets = EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+            section.contentInsets = EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16)
+            section.decorationItems = [
+                LayoutDecorationItem.background(elementKind: ShelfBackgroundView.description()),
+            ]
             
             let headerSize = LayoutSize(widthDimension: .fractionalWidth(1),
-                                       heightDimension: .estimated(64))
-            let headerSupplementary = SupplementaryItem(layoutSize: headerSize, elementKind: "header", alignment: .top)
-            section.boundarySupplementaryItems = [headerSupplementary]
+                                        heightDimension: .estimated(64))
+            let headerSupplementary = SupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+            let bottomSize = LayoutSize(widthDimension: .fractionalWidth(1),
+                                        heightDimension: .estimated(64))
+            let bottomSupplementary = SupplementaryItem(layoutSize: bottomSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
+            section.boundarySupplementaryItems = [headerSupplementary, bottomSupplementary]
             
             return section
         }
@@ -56,6 +62,8 @@ extension ShelfViewController {
         let layout = CompositionalLayout(sectionProvider: sectionProvider,
                                          configuration: config)
         
+        layout.register(ShelfBackgroundView.self, forDecorationViewOfKind: ShelfBackgroundView.description())
+        
         return layout
     }
 }
@@ -63,13 +71,14 @@ extension ShelfViewController {
 extension ShelfViewController {
     
     private func configureHierarchy() {
+        view.backgroundColor = .systemBackground
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         view.addSubview(collectionView)
-        collectionView.backgroundColor = .clear
         collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(CGFloat(16))
         }
-        collectionView.backgroundColor = .systemBackground
+        collectionView.backgroundColor = .clear
     }
     
     private func configureDataSource() {
@@ -86,18 +95,32 @@ extension ShelfViewController {
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: alcohol)
         }
         
-        let supplementaryRegistration = UICollectionView.SupplementaryRegistration<HeaderSupplementaryView>(elementKind: "header") {
+        let headerSupplementaryRegistration = UICollectionView.SupplementaryRegistration<HeaderSupplementaryView>(elementKind: UICollectionView.elementKindSectionHeader) {
             (supplementaryView, string, indexPath) in
-            
+
+            if let snapshot = self.currentSnapshot {
+                let shelf = snapshot.sectionIdentifiers[indexPath.section]
+                supplementaryView.person = shelf.person
+            }
+        }
+
+        let bottomSupplementaryRegistration = UICollectionView.SupplementaryRegistration<BottomSupplementaryView>(elementKind: UICollectionView.elementKindSectionFooter) {
+            (supplementaryView, string, indexPath) in
+
             if let snapshot = self.currentSnapshot {
                 let shelf = snapshot.sectionIdentifiers[indexPath.section]
                 supplementaryView.person = shelf.person
             }
         }
         
-        dataSource.supplementaryViewProvider = { (view, kind, index) in
-            return self.collectionView.dequeueConfiguredReusableSupplementary(
-                using: supplementaryRegistration, for: index)
+        dataSource.supplementaryViewProvider = { [unowned self]
+            (collectionView, elementKind, indexPath) -> UICollectionReusableView? in
+            
+            if elementKind == UICollectionView.elementKindSectionHeader {
+                return self.collectionView.dequeueConfiguredReusableSupplementary(using: headerSupplementaryRegistration, for: indexPath)
+            } else {
+                return self.collectionView.dequeueConfiguredReusableSupplementary(using: bottomSupplementaryRegistration, for: indexPath)
+            }
         }
         
         currentSnapshot = Snapshot<Shelf, Alcohol>()
