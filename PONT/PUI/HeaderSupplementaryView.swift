@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class HeaderSupplementaryView: UICollectionReusableView {
+class HeaderSupplementaryView: CollectionReusableView {
     
     private enum Layout {
         static var cornerRadius: CGFloat = 16
@@ -58,23 +58,13 @@ class HeaderSupplementaryView: UICollectionReusableView {
         return stackView
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        configure()
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         
         avatarImageView.layer.cornerRadius = Layout.cornerRadius
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func configure() {
+    public override func configure() {
         
         addSubview(avatarImageView)
         addSubview(nameAndSirnameStackView)

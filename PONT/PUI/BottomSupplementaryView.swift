@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class BottomSupplementaryView: SupplementaryView {
+class BottomSupplementaryView: CollectionReusableView {
     
     private var beerLikeView = PUILikeView(defaultEmoji: "🍺", likeEmoji: "🍻", defaultBackgroundColor: .systemGray6, likeBackgroundColor: .systemYellow)
     private var fuLikeView = PUILikeView(defaultEmoji: "🤢", likeEmoji: "🤮", defaultBackgroundColor: .systemGray6, likeBackgroundColor: .systemGreen)

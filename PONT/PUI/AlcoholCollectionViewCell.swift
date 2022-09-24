@@ -8,7 +8,12 @@
 import UIKit
 import SnapKit
 
-class AlcoholCollectionViewCell: UICollectionViewCell {
+public class AlcoholCollectionViewCell: CollectionViewCell {
+    
+    private enum Constants {
+        static var cornerRadius: CGFloat = 10
+        static var insets: CGFloat = 4
+    }
     
     private var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -30,27 +35,14 @@ class AlcoholCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: .zero)
-        
-        configure()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-extension AlcoholCollectionViewCell {
-    
-    private func configure() {
+    public override func configure() {
         contentView.backgroundColor = .systemGray6
         contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
         
         imageView.snp.makeConstraints {
             $0.height.equalToSuperview().multipliedBy(0.8)
-            $0.top.equalToSuperview().inset(4)
+            $0.top.equalToSuperview().inset(Constants.insets)
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
         }
@@ -63,9 +55,9 @@ extension AlcoholCollectionViewCell {
         }
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
-        contentView.layer.cornerRadius = 10
+        contentView.layer.cornerRadius = Constants.cornerRadius
     }
 }

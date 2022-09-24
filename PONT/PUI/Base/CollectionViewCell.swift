@@ -1,5 +1,5 @@
 //
-//  PUISupplementaryView.swift
+//  CollectionViewCell.swift
 //  PONT
 //
 //  Created by Maxim Butin on 24.09.2022.
@@ -7,11 +7,10 @@
 
 import UIKit
 
-public class SupplementaryView: UICollectionReusableView {
+public class CollectionViewCell: UICollectionViewCell {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
         
         configure()
     }

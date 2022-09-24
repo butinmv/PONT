@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class ShelfBackgroundView: UICollectionReusableView {
+public class ShelfBackgroundView: CollectionReusableView {
     
     private enum Layout {
         static let cornerRadius: CGFloat = 24
@@ -19,18 +19,12 @@ public class ShelfBackgroundView: UICollectionReusableView {
         return view
     }()
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    public override func configure() {
         addSubview(backgroundView)
         
         backgroundView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     public override func layoutSubviews() {

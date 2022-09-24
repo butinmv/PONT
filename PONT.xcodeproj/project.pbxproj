@@ -25,9 +25,10 @@
 		A20CCFA028CE1D0D00717B0F /* + UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCF9F28CE1D0D00717B0F /* + UIEdgeInsets.swift */; };
 		A20CCFA228CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCFA128CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift */; };
 		A20CCFA428CE205F00717B0F /* ShelfLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CCFA328CE205F00717B0F /* ShelfLayout.swift */; };
+		A237278528DF4D2D00BD2186 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237278428DF4D2D00BD2186 /* CollectionViewCell.swift */; };
 		A24E16C128DF225000A7C86F /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E16C028DF225000A7C86F /* View.swift */; };
 		A24E16C328DF229600A7C86F /* PUILikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E16C228DF229600A7C86F /* PUILikeView.swift */; };
-		A24E16C528DF238700A7C86F /* SupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E16C428DF238700A7C86F /* SupplementaryView.swift */; };
+		A24E16C528DF238700A7C86F /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E16C428DF238700A7C86F /* CollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,9 +64,10 @@
 		A20CCF9F28CE1D0D00717B0F /* + UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ UIEdgeInsets.swift"; sourceTree = "<group>"; };
 		A20CCFA128CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ NSDirectionalEdgeInsets.swift"; sourceTree = "<group>"; };
 		A20CCFA328CE205F00717B0F /* ShelfLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfLayout.swift; sourceTree = "<group>"; };
+		A237278428DF4D2D00BD2186 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		A24E16C028DF225000A7C86F /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		A24E16C228DF229600A7C86F /* PUILikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUILikeView.swift; sourceTree = "<group>"; };
-		A24E16C428DF238700A7C86F /* SupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryView.swift; sourceTree = "<group>"; };
+		A24E16C428DF238700A7C86F /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +128,6 @@
 		A20CCF9B28CE1A1700717B0F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A20CCF9128CCFC8200717B0F /* AlcoholCollectionViewCell.swift */,
-				A20CCF9528CD2C9600717B0F /* HeaderSupplementaryView.swift */,
-				A20CCF9728CE19E700717B0F /* BottomSupplementaryView.swift */,
-				A20CCF9928CE1A0A00717B0F /* ShelfBackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +165,10 @@
 			children = (
 				A24E16BF28DF224900A7C86F /* Base */,
 				A24E16C228DF229600A7C86F /* PUILikeView.swift */,
+				A20CCF9128CCFC8200717B0F /* AlcoholCollectionViewCell.swift */,
+				A20CCF9528CD2C9600717B0F /* HeaderSupplementaryView.swift */,
+				A20CCF9728CE19E700717B0F /* BottomSupplementaryView.swift */,
+				A20CCF9928CE1A0A00717B0F /* ShelfBackgroundView.swift */,
 			);
 			path = PUI;
 			sourceTree = "<group>";
@@ -175,7 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				A24E16C028DF225000A7C86F /* View.swift */,
-				A24E16C428DF238700A7C86F /* SupplementaryView.swift */,
+				A24E16C428DF238700A7C86F /* CollectionReusableView.swift */,
+				A237278428DF4D2D00BD2186 /* CollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				A20CCF9228CCFC8200717B0F /* AlcoholCollectionViewCell.swift in Sources */,
 				A20CCFA228CE1ED900717B0F /* + NSDirectionalEdgeInsets.swift in Sources */,
 				A20CCF8928CCBD6900717B0F /* Person.swift in Sources */,
+				A237278528DF4D2D00BD2186 /* CollectionViewCell.swift in Sources */,
 				A20CCFA028CE1D0D00717B0F /* + UIEdgeInsets.swift in Sources */,
 				A20CCF7428CCB59400717B0F /* ShelfViewController.swift in Sources */,
 				A20CCF9028CCC16500717B0F /* Section.swift in Sources */,
@@ -274,7 +278,7 @@
 				A20CCF8728CCBB6300717B0F /* Alcohol.swift in Sources */,
 				A20CCF7228CCB59400717B0F /* SceneDelegate.swift in Sources */,
 				A20CCF9628CD2C9600717B0F /* HeaderSupplementaryView.swift in Sources */,
-				A24E16C528DF238700A7C86F /* SupplementaryView.swift in Sources */,
+				A24E16C528DF238700A7C86F /* CollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
